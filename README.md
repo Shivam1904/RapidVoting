@@ -17,20 +17,20 @@ Every voter's card is sorted in buckets of each candidate's key in dictionary
 Candidate Wise Ballot = { candidateVoteList: [list of all votes where candidate is ranked 1] }.
 
     FOR n ITERATIONS:
-        FOR all candidates in ALL_SORTED_BALLOTS,
-        check if any candidate has a clear majority at rank 1
-        (check if any candidate's vote list has count > (totalVoters/2)+1 , clear majority?)
-        if yes:
-            CLEAR WINNER
-        if no:
-            check if we can eliminate a lowest ranking candidate. 
-            (checking if the lowest ranking candidate's rank 1 votes are equal to the highest ranking candidate's rank 1 votes.)
-            if yes:
-                tie
-                breakTie()
-            if no:
-                DISCARDED_CANDIDATES = append list of eliminated candidates in this round.
-				Call Eliminate Lowest Ranking Candidate 
+        FOR all candidates in Candidate Wise Ballot,
+		check if any candidate has a clear majority at rank 1
+		(check if any candidate's vote list has count > (totalVoters/2)+1 , clear majority?)
+		if yes:
+		    CLEAR WINNER
+		if no:
+		    check if we can eliminate a lowest ranking candidate. 
+		    (checking if the lowest ranking candidate's rank 1 votes are equal to the highest ranking candidate's rank 1 votes.)
+		    if yes:
+			tie
+			resolve_tie()
+		    if no:
+			DISCARDED_CANDIDATES = append list of eliminated candidates in this round.
+					Call Eliminate Lowest Ranking Candidate 
 
         NEXT ITERATION
 
