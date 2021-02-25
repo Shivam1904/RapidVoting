@@ -1,8 +1,8 @@
 This project contains a python implementation of Ranked Choice vVoting algorithm.
 
 Input file: In this code, we are using the file "votes_data.txt" to read our reqiured inputs. The format is:
-_ Line 1: Number of candidates
-_ Line 2 to EOF: Comma seperated user's vote per line
+- Line 1: Number of candidates
+- Line 2 to EOF: Comma seperated user's vote per line
 
 
 ### How to run?
